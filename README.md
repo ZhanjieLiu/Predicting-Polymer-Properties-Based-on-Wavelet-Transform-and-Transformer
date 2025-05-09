@@ -1,5 +1,6 @@
 The code and dataset used for the article on "Predicting Polymer Properties Based on Wavelet Transform and Transformer".
-1. "SMILES.csv"为本研究所使用的聚酰亚胺数据集，来源于Volgin等人于2022年在其研究中公开发表的开源数据集：https://doi.org/10.1021/acsomega.2c04649。
-2. "Training_main.py"为本研究对应的主要代码，本章研究通过小波变换对聚酰亚胺（PI）摩根指纹进行多层次分解，提取低频与高频特征，增强分子表征的精度与抗噪能力。随后，结合Transformer模型的自注意力机制，进行多尺度特征的融合与长程依赖建模。此外，采用贝叶斯优化算法自适应调整小波分解层级及Transformer超参数，并结合Adam优化器、L2正则化与早停策略来防止过拟合。最后，我们依据回归模型评价指标，全面评估了预测模型的性能。
-3. "bayesian_optimization_result.csv"为采用本文中的方法得到的贝叶斯优化过程中所有的超参数组合及其对应的验证集的评估结果。
-4. 
+1. "SMILES.csv" is the dataset of polyimides used in this study, sourced from an open-access dataset published by Volgin et al. in their 2022 research: https://doi.org/10.1021/acsomega.2c04649.
+2. "Training_main.py" is the main code corresponding to this study. This chapter explores the use of wavelet transform for multi-level decomposition of the Morgan fingerprints of polyimides, extracting both low-frequency and high-frequency features to enhance the accuracy and noise robustness of molecular representation. Subsequently, the Transformer model's self-attention mechanism is employed to integrate multi-scale features and model long-range dependencies. Furthermore, Bayesian optimization is utilized to adaptively adjust the wavelet decomposition levels and Transformer hyperparameters, combined with the Adam optimizer, L2 regularization, and early stopping strategies to prevent overfitting. Finally, the performance of the predictive model is comprehensively evaluated based on regression model evaluation metrics.
+3. "bayesian_optimization_result.csv"contains all the hyperparameter combinations and their corresponding evaluation metrics of the predictive model obtained during the Bayesian optimization process using the method described in this paper.
+4. “Validation_R²_cumulative_maximum_progress.py" is the code for generating Figure 8. Progression of Cumulative Maximum Validation R² during Bayesian Optimization.
+5. “Bayesian_optimization_result_visualization.py” is the code for generating Figure 9. Bayesian Optimization of Wavelet Transform Parameters: Effects on Validation R² Metrics.
